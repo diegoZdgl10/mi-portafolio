@@ -1,0 +1,14 @@
+# Archivos de log
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de editor de código
+.vscode/
+.idea/
+
+# Archivos de configuración locales
+*.env
+*.local
