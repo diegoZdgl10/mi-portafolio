@@ -6,5 +6,5 @@ Este es el repositorio de mi portafolio personal. Aquí muestro algunos de mis p
 ## Tecnologías utilizadas
 
 - **HTML5**
-- **CSS3**
-- **JavaScript**
+- **CSS3** (con **Bulma** 1.0.2)
+- **JavaScript** (con **JQuery** 3.7.1)
