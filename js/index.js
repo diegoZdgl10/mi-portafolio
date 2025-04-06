@@ -4,24 +4,28 @@ let actividades = [
 ]
 
 $(document).ready(function() {
+    generaPreviewEjericios()
+
+    $('#actividades').on('click', 'a', function(event) {
+        localStorage.setItem('ejercicio',  $(this).attr('act'))
+    });
+})
+
+function generaPreviewEjericios() {
     actividades.forEach(element => {
         let archivo = `/jsons/${element}.json`
         cargaComponente('actividades', 'preview')
         leerJson(archivo, function(data) {
-            let previewAct = $('#preview-actividad')
-            previewAct.attr('id', `preview-${data.id}`)
-            previewAct.find('img').attr('src', `/assets/${data.solucion}`)
-            previewAct.find('a').attr('href', `/views/portafolio/${element}.html`)
-            previewAct.find('a').text(data.titulo)
+            generaRecuadro(data, element)
         })
     })
-})
+}
 
-
-function leerJson(archivo, callback) {
-    $.getJSON(archivo, function(data) {
-        callback(data)
-    }).fail(function() {
-        console.log("ERROR: al leer " + archivo)
-    })
+function generaRecuadro(data, element) {
+    let previewAct = $('#preview-actividad')
+    previewAct.attr('id', `preview-${data.id}`)
+    previewAct.find('img').attr('src', `/assets/${data.solucion}`)
+    previewAct.find('a').attr('href', '/views/ejercicios.html')
+    previewAct.find('a').attr('act', element)
+    previewAct.find('a').text(data.titulo)
 }
