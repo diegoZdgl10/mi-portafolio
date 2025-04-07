@@ -12,8 +12,8 @@ function setRuta(nuevaRuta) {
  */
 function cargaComponente(id, componente) {
     $.get(`/views/components/${componente}.html`, function(data) {
-        $(`#${id}`).prepend(data);
-    });
+        $(`#${id}`).prepend(data)
+    })
 }
 
 /**

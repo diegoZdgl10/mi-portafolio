@@ -3,6 +3,9 @@ $(document).ready(function() {
 })
 
 function generarVistaSolucion() {
+    if (localStorage.getItem('ejercicio') == null) {
+        window.location.href = '/index.html'
+    }
     let archivo = `/jsons/${localStorage.getItem('ejercicio')}.json`
     leerJson(archivo, function(data) {
         console.log(data)

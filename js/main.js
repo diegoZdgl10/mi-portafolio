@@ -8,6 +8,6 @@ function leerJson(archivo, callback) {
     $.getJSON(archivo, function(data) {
         callback(data)
     }).fail(function() {
-        console.log("ERROR: al leer " + archivo)
+        console.log('ERROR: al leer ' + archivo)
     })
 }
