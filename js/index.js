@@ -1,6 +1,8 @@
 let actividades = [
     'dos_sumas',
     'num_palindromo',
+    'merge_listas_ord',
+    'parentesis_correctos',
 ]
 
 $(document).ready(function() {
