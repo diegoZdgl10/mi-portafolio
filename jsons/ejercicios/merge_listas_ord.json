@@ -5,6 +5,5 @@
         "JavaScript",
         "Ejercicios"
     ],
-    "descripcion": "<p>Se dan dos listas ordenadas, <code>lista1</code> y <code>lista2</code>.</p><p>Fusionar las dos listas en una lista ordenada.</p>",
     "solucion": "mergeListasOrd.png"
 }

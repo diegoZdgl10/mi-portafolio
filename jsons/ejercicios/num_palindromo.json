@@ -5,6 +5,5 @@
         "JavaScript",
         "Ejercicios"
     ],
-    "descripcion": "Dado un número entero <code>x</code>, devuelve <code>true</code> si <code>x</code> es un palindromo, y <code>false</code> en caso contrario.",
     "solucion": "numPalindromo.png"
 }

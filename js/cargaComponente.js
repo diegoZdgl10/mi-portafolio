@@ -1,10 +1,3 @@
-let ruta = './'
-ruta = '/views/components/'
-
-function setRuta(nuevaRuta) {
-    ruta = nuevaRuta
-}
-
 /**
  * Funcion que carga componentes de la vista
  * @param {*} id el id del componente html donde se colocara el nuevo componente
