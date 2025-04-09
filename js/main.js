@@ -1,5 +1,3 @@
-var darkMode = false
-
 $(document).ready(function() {
     tema()
 })
@@ -13,18 +11,20 @@ function leerJson(archivo, callback) {
 }
 
 function tema() {
-    if (darkMode) {{
-        $('html').attr('data-theme', 'dark');
-    }}
+    if (localStorage.getItem('darkMode') === 'true') {
+        $('html').attr('data-theme', 'dark')
+        $('#dark-mode').attr('value', "true")
+        $('#dark-mode').prop('checked', true)
+    }
     $('#dark-mode').change(function() {
         if ($(this).is(':checked')) {
-            darkMode = true
-            $('html').attr('data-theme', 'dark');
+            $('html').attr('data-theme', 'dark')
             cambioIconos('white')
+            localStorage.setItem('darkMode', true)
         } else {
-            darkMode = false
-            $('html').attr('data-theme', 'light');
+            $('html').attr('data-theme', 'light')
             cambioIconos('black')
+            localStorage.setItem('darkMode', false)
         }
     })
 }
