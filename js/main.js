@@ -1,7 +1,7 @@
-var ejercicio = 'aux'
+var darkMode = false
 
 $(document).ready(function() {
-    componentesGenerales()
+    tema()
 })
 
 function leerJson(archivo, callback) {
@@ -9,5 +9,20 @@ function leerJson(archivo, callback) {
         callback(data)
     }).fail(function() {
         console.log('ERROR: al leer ' + archivo)
+    })
+}
+
+function tema() {
+    if (darkMode) {{
+        $('html').attr('data-theme', 'dark');
+    }}
+    $('#dark-mode').change(function() {
+        if ($(this).is(':checked')) {
+            darkMode = true
+            $('html').attr('data-theme', 'dark');
+        } else {
+            darkMode = false
+            $('html').attr('data-theme', 'light');
+        }
     })
 }

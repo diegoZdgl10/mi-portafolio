@@ -8,18 +8,3 @@ function cargaComponente(id, componente) {
         $(`#${id}`).prepend(data)
     })
 }
-
-/**
- * Funcion que carga los componentes utilizados en toda la pagina
- */
-function componentesGenerales() {
-    let componentes = [
-        {'id': 'navbar', 'componente':'navbar'},
-        {'id': 'footer', 'componente':'footer'},
-        {'id': 'head', 'componente':'head'},
-    ]
-
-    componentes.forEach(element => {
-        cargaComponente(element.id, element.componente)
-    })
-}
