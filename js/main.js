@@ -20,9 +20,17 @@ function tema() {
         if ($(this).is(':checked')) {
             darkMode = true
             $('html').attr('data-theme', 'dark');
+            cambioIconos('white')
         } else {
             darkMode = false
             $('html').attr('data-theme', 'light');
+            cambioIconos('black')
         }
     })
+}
+
+function cambioIconos(color) {
+    $('#github-logo').attr('src', `/assets/svg/github-${color}.svg`)
+    $('#linkedin-logo').attr('src', `/assets/svg/linkedin-${color}.svg`)
+    $('#info-logo').attr('src', `/assets/svg/info-${color}.svg`)
 }
