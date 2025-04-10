@@ -6,11 +6,6 @@ let actividades = [
 ]
 
 $(document).ready(function() {
-    generaPreviewEjericios()
-
-    $('#actividades').on('click', 'a', function(event) {
-        localStorage.setItem('ejercicio',  $(this).attr('act'))
-    })
 })
 
 function generaPreviewEjericios() {
