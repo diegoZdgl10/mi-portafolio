@@ -15,6 +15,7 @@ function tema() {
         $('html').attr('data-theme', 'dark')
         $('#dark-mode').attr('value', "true")
         $('#dark-mode').prop('checked', true)
+        cambioIconos('white')
     }
     $('#dark-mode').change(function() {
         if ($(this).is(':checked')) {
