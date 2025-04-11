@@ -10,7 +10,6 @@
 </head>
 <script src="/js/jquery/jquery-3.7.1.min.js"></script>
 <script src="/js/main.js"></script>
-<script src="/js/index.js"></script>
 
 <body>
     <!-- Navbar -->
@@ -32,11 +31,19 @@
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">Mas</a>
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/views/about.html">Sobre mí</a>
-                        <a class="navbar-item">Experiencia laboral</a>
-                        <a class="navbar-item" href="/views/contact.html">Contacto</a>
+                        <a class="navbar-item" href="/views/about.html">
+                            Sobre mí
+                        </a>
+                        <a class="navbar-item" href="/views/about.html#experiencia-laboral">
+                            Experiencia laboral
+                        </a>
+                        <a class="navbar-item" href="/views/about.html#contacto">
+                            Contacto
+                        </a>
                         <hr class="navbar-divider" />
-                        <a class="navbar-item" href="/views/contact.html">Creditos</a>
+                        <a class="navbar-item" href="/views/contact.html">
+                            Creditos
+                        </a>
                     </div>
                 </div>
             </div>
@@ -87,7 +94,7 @@
                         así como el uso de patrones de diseño.
                     </p>
                     <div class="mt-6 mr-4 has-text-right">
-                        <a href="/views/about.html" class="button is-primary">
+                        <a href="/views/about.html" class="button is-primary has-text-weight-medium is-medium">
                             Ver más
                         </a>
                     </div>
@@ -111,96 +118,94 @@
                 <h1 class="title has-text-centered section-title">PORTAFOLIO</h1>
             </div>
 
-            <div class="mb-4 has-background borde-redondo" style="padding: 40px">   
-                <div class="row columns is-multiline">
-                    <div class="column is-4">
-                        <div class="card large">
-                            <div class="card-image">
-                                <figure class="image is-16by9">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=713&amp;q=80"
-                                        alt="Image"
-                                    />
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <div class="mb-3 has-text-centered">
-                                    <p class="title is-4 no-padding">Lead Developer</p>
-                                </div>
-                                <div class="content">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                    Sit amet consectetur adipiscing elit quisque faucibus ex.
-                                    Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
-                                    <div class="mt-3">
-                                        <a class="button is-info" href="#">
-                                            Visitar
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="row columns is-multiline">
+                <div class="column is-4">
+                    <div class="card large">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img
+                                    src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=713&amp;q=80"
+                                    alt="Image"
+                                />
+                            </figure>
                         </div>
-                    </div>
-                    <div class="column is-4">
-                        <div class="card large">
-                            <div class="card-image">
-                                <figure class="image is-16by9">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=713&amp;q=80"
-                                        alt="Image"
-                                    />
-                                </figure>
+                        <div class="card-content">
+                            <div class="mb-3 has-text-centered">
+                                <p class="title is-4 no-padding">Lead Developer</p>
                             </div>
-                            <div class="card-content">
-                                <div class="mb-3 has-text-centered">
-                                    <p class="title is-4 no-padding">Lead Developer</p>
-                                </div>
-                                <div class="content">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                    Sit amet consectetur adipiscing elit quisque faucibus ex.
-                                    Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
-                                    <div class="mt-3">
-                                        <a class="button is-info" href="#">
-                                            Visitar
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-4">
-                        <div class="card large">
-                            <div class="card-image">
-                                <figure class="image is-16by9">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=713&amp;q=80"
-                                        alt="Image"
-                                    />
-                                </figure>
-                            </div>
-                            <div class="card-content">
-                                <div class="mb-3 has-text-centered">
-                                    <p class="title is-4 no-padding">Lead Developer</p>
-                                </div>
-                                <div class="content">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                    Sit amet consectetur adipiscing elit quisque faucibus ex.
-                                    Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
-                                    <div class="mt-3">
-                                        <a class="button is-info" href="#">
-                                            Visitar
-                                        </a>
-                                    </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Sit amet consectetur adipiscing elit quisque faucibus ex.
+                                Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+                                <div class="mt-3">
+                                    <a class="button is-info" href="#">
+                                        Visitar
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="column is-4">
+                    <div class="card large">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img
+                                    src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=713&amp;q=80"
+                                    alt="Image"
+                                />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="mb-3 has-text-centered">
+                                <p class="title is-4 no-padding">Lead Developer</p>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Sit amet consectetur adipiscing elit quisque faucibus ex.
+                                Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+                                <div class="mt-3">
+                                    <a class="button is-info" href="#">
+                                        Visitar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card large">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img
+                                    src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=713&amp;q=80"
+                                    alt="Image"
+                                />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="mb-3 has-text-centered">
+                                <p class="title is-4 no-padding">Lead Developer</p>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                                Sit amet consectetur adipiscing elit quisque faucibus ex.
+                                Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+                                <div class="mt-3">
+                                    <a class="button is-info" href="#">
+                                        Visitar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <div class="mt-6 mr-4 has-text-right">
-                    <a href="/views/about.html" class="button is-primary">
-                        Ver más
-                    </a>
-                </div>
+            <div class="mt-6 mr-4 has-text-right">
+                <a href="/views/about.html" class="button is-primary has-text-weight-medium is-medium">
+                    Ver más
+                </a>
             </div>
         </div>
     </section>
@@ -214,11 +219,15 @@
                     <p class="subtitle is-size-6">Programador Jr</p>
                 </div>
                 <div class="soc">
-                    <a href="https://github.com/diegozdgl10">
+                    <a
+                        href="https://github.com/diegozdgl10"
+                        target="_blank"
+                    >
                         <img id="github-logo" src="/assets/svg/github-black.svg" width="35"/>
                     </a>
                     <a
                         href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                        target="_blank"
                     >
                         <img id="linkedin-logo" src="/assets/svg/linkedin-black.svg" width="35"/>
                     </a>
