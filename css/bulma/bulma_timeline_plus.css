@@ -1,0 +1,45 @@
+/* Centra la linea de tiempo */
+.tl-center {
+    list-style: none;
+    padding: 0;
+    /*text-align: center;*/
+    margin: 0 auto;
+    width: fit-content;
+}
+
+/* Cambia el color de centro de bolitas de linea de tiempo */
+.timeline .timeline-item.is-light.complete::before {
+    border-color: whitesmoke !important;
+    background:  whitesmoke;
+    border: 0.1em solid  whitesmoke;
+}
+.timeline .timeline-item.is-dark.complete::before {
+    border-color: #363636 !important;
+    background: #363636;
+    border: 0.1em solid #363636;
+}
+.timeline .timeline-item.is-primary.complete::before {
+    border-color: #00d1b2 !important;
+    background: #00d1b2;
+    border: 0.1em solid #00d1b2;
+}
+.timeline .timeline-item.is-info.complete::before {
+    border-color: #3273dc !important;
+    background: #3273dc;
+    border: 0.1em solid #3273dc;
+}
+.timeline .timeline-item.is-success.complete::before {
+    border-color: #23d160 !important;
+    background: #23d160;
+    border: 0.1em solid #23d160;
+}
+.timeline .timeline-item.is-warning.complete::before {
+    border-color: #ffdd57 !important;
+    background: #ffdd57;
+    border: 0.1em solid #ffdd57;
+}
+.timeline .timeline-item.is-danger.complete::before {
+    border-color: #ff3860 !important;
+    background: #ff3860;
+    border: 0.1em solid #ff3860;
+}
