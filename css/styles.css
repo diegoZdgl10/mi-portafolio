@@ -39,3 +39,13 @@
     border-bottom-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
 }
+
+/* Asterisco para campos requeridos */
+.required.line{
+    text-decoration: underline #ff3860;
+}
+
+.required:after {
+    content: ' *';
+    color: #ff3860;
+}

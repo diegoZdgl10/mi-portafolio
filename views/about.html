@@ -1,32 +1,313 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="/css/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="/css/bulma/bulma_switch.css" />
+    <link rel="stylesheet" href="/css/bulma/bulma_timeline.css" />
+    <link rel="stylesheet" href="/css/bulma/bulma_timeline_plus.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <script src="/js/jquery/jquery-3.7.1.min.js"></script>
 <script src="/js/main.js"></script>
-<script src="/js/cargaComponente.js"></script>
+
 <body>
     <!-- Navbar -->
-    <nav id="navbar">
-    </nav> 
+    <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/index.html">
+                <h2 class="title bruno-ace-sc-regular">Diego</h2>
+            </a>
+        </div>
 
-    <!-- Sobre mí -->
-    <section>
-        <div>
-            <h1>Sobre mí</h1>
-            <p>Programador apasionado, con énfasis en back end, ingeniería de software y gestión de bases de datos. Experiencia en la creación de aplicaciones web utilizando metodologías ágiles y tradicionales, así como el uso de patrones de diseño.</p>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/index.html">Inicio</a>
 
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Node.js, Laravel, Spring</li>
-                <li>Git, GitHub, GitLab</li>
-            </ul>
+                <a class="navbar-item">Proyectos</a>
+
+                <a class="navbar-item">Ejercicios</a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Mas</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/views/about.html">
+                            Sobre mí
+                        </a>
+                        <a class="navbar-item" href="/views/about.html#experiencia-laboral">
+                            Experiencia laboral
+                        </a>
+                        <a class="navbar-item" href="/views/about.html#contacto">
+                            Contacto
+                        </a>
+                        <hr class="navbar-divider" />
+                        <a class="navbar-item" href="#">
+                            Créditos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <label class="switch is-rounded">
+                        <input type="checkbox" value="false" id="dark-mode"/>
+                        <span class="check"></span>
+                        <span class="control-label is-size-7">Dark<br/>mode</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Perfil -->
+    <section id="perfil" class="section">
+        <div class="container">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">ACERCA DE MI</h1>
+            </div>
+            <div class="column is-12">
+                <p>
+                    <b>
+                        Hola, soy Diego Zamora
+                    </b>
+                </p>
+                <br/>
+                <p class="mb-1">
+                    Soy estudiante de
+                    <a href="https://www.fciencias.unam.mx/estudiar-en-ciencias/estudios/licenciaturas/ccomputacion">
+                        Ciencias de la Computación
+                    </a>
+                    en la Facultad de Ciencias de la UNAM.
+                    A lo largo de los años, he adquirido habilidades y conocimientos que me han convertido
+                    en un programador junior con sólida experiencia en desarrollo Back-End,
+                    utilizando tecnologías como Spring Boot, Laravel, Node.js, entre otras.
+                </p>
+                <p class="mb-1">
+                    Sin embargo, mis conocimientos no se limitan al Back-End. También tengo experiencia
+                    en el diseño de interfaces de usuario (UI), así como en procesos de pruebas de usabilidad
+                    y evaluación de aplicaciones mediante la Escala de Usabilidad de un Sistema (SUS).
+                </p>
+                <p class="mb-1">
+                    Además, poseo conocimientos en áreas complementarias al desarrollo de software,
+                    como la creación de contenido multimedia. He trabajado en dibujo digital, animación 3D
+                    y edición de video, utilizando herramientas como GIMP, Blender y Kdenlive.
+                    Esta combinación de habilidades, junto con mi gusto por los videojuegos,
+                    me ha permitido desarrollar prototipos de videojuegos.
+                </p>
+                <p class="mb-1">
+                    También tengo conocimientos en hardware, adquiridos tanto por interés personal como por
+                    mis estudios en la carrera técnica de Mantenimiento a Sistemas de Microcómputo y Redes.
+                </p>
+                <p class="mb-1">
+                    Me apasiona crear soluciones que combinan funcionalidad y una excelente experiencia
+                    de usuario. Soy una persona autodidacta, curiosa y comprometida con la mejora continua.
+                    Actualmente estoy enfocado en profundizar en el desarrollo de videojuegos y en mejorar
+                    mis habilidades como desarrollador.
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia laboral -->
+    <section id="experiencia-laboral" class="section">
+        <div class="container">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">EXPERIENCIA LABORAL</h1>
+            </div>
+            <div class="column is-12">
+                <ul class="timeline tl-center">
+                    <li class="timeline-item is-info complete">
+                        <div class="timeline-content">
+                            <p class="heading">Desarrollador Front-End de Aplicaciones Web</p>
+                            <p class="is-size-7">
+                                <i>Septiembre 2024 - Marzo 2025</i> <br/>
+                                Instituto de Ciencias Aplicadas y Tecnología
+                            </p>
+                            <div class="ml-1 mt-2">
+                                <ul>
+                                    <li>Refactorización, detección y resolución de errores</li>
+                                    <li>Desarrollo y despliegue con el uso de NodeJS, jQuery y Docker</li>
+                                    <li>Empleo de ESLint y módulos para asegurar un código limpio y mantenible</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="timeline-item is-info">
+                        <div class="timeline-content">
+                            <p class="heading">Desarrollador Full Stack de Aplicaciones Web</p>
+                            <p class="is-size-7">
+                                <i>Febrero 2024 - Septiembre 2024</i> <br/>
+                                Instituto de Ciencias Aplicadas y Tecnología
+                            </p>
+                            <div class="ml-1 mt-2">
+                                <ul>
+                                    <li>Desarrollo de aplicaciones web utilizando XP y MVC</li>
+                                    <li>Uso del framework Laravel y JQuery</li>
+                                    <li>Desarrollo y testeo del funcionamiento de aplicaciones web</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item is-info">
+                        <div class="timeline-content">
+                            <p class="heading">Mantenimiento a sistemas de cómputo</p>
+                            <p class="is-size-7">
+                                <i>Mayo 2018 - Julio 2018</i> <br/>
+                                Colegio de Ciencias y Humanidades Plantel Sur
+                            </p>
+                            <div class="ml-1 mt-2">
+                                <ul>
+                                    <li>Mantenimiento preventivo a equipos de cómputo</li>
+                                    <li>Diagnóstico y reparación de hardware</li>
+                                    <li>Inventario de los componentes de hardware disponibles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Estudios -->
+    <!--
+    <section id="experiencia-laboral" class="section">
+        <div class="container">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">ESTUDIOS</h1>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">CONTACTO</h1>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-7">
+                    <div>
+                        <p class="subtitle is-size-3">
+                            <b>Contáctame</b>
+                        </p>
+                        <p class="is-size-4">
+                            ¿Tienes una propuesta, colaboración o simplemente quieres saludar? <br/>
+                            Estaré encantado de leerte. ¡Hablemos!
+                        </p>
+                    </div>
+                    <br/>
+                    <div class="mt-6 buttons has-addons is-centered">
+                        <a href="https://github.com/diegozdgl10"
+                            class="button is-link is-info"
+                            target="_blank">
+                            <img class="mr-3" src="/assets/svg/github-black.svg" width="30"/>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                            class="button is-link is-info"
+                            target="_blank">
+                            <img class="mr-3" src="/assets/svg/linkedin-black.svg" width="30"/>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column is-5 box">
+                    <form action="https://formspree.io/f/xnnplrgp" method="POST">
+                        <div class="field">
+							<label for="nombre" class="label required">
+                                Nombre
+                            </label>
+							<div class="control">
+								<input
+                                    name="nombre"
+                                    id="nombre"
+                                    class="input is-link is-normal"
+                                    type="text"
+                                    placeholder="Tu nombre"
+                                    required
+                                />
+							</div>
+						</div>
+                        <div class="field">
+							<label for="email" class="label required">
+                                Email
+                            </label>
+							<div class="control">
+								<input
+                                    name="email"
+                                    id="email"
+                                    class="input is-link is-normal"
+                                    type="email"
+                                    placeholder="correo@ejemplo.com"
+                                    required
+                                />
+							</div>
+						</div>
+                        <div class="field">
+							<label for="mensaje" class="label required">
+                                Mensaje
+                            </label>
+							<div class="control">
+                                <textarea
+                                    name="mensaje"
+                                    id="mensaje"
+                                    class="textarea is-link is-normal"
+                                    placeholder="Tu mensaje"
+                                    required
+                                ></textarea>
+							</div>
+						</div>
+                        <div class="control">
+							<button type="submit"
+                                class="button is-link is-fullwidth has-text-weight-medium is-medium">
+                                Enviar
+                            </button>
+						</div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer class="footer mt-4 card-contet">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="mb-5">
+                    <h3 class="title is-size-5">Diego Zamora 2025</h3>
+                    <p class="subtitle is-size-6">Programador Jr</p>
+                </div>
+                <div class="soc">
+                    <a
+                        href="https://github.com/diegozdgl10" target="_blank"
+                        target="_blank"
+                    >
+                        <img id="github-logo" src="/assets/svg/github-black.svg" width="35"/>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                        target="_blank"
+                    >
+                        <img id="linkedin-logo" src="/assets/svg/linkedin-black.svg" width="35"/>
+                    </a>
+                    <a href="/views/about.html">
+                        <img id="info-logo" src="/assets/svg/info-black.svg" width="35"/>
+                    </a>
+                </div>
+                <div class="mt-5">
+                    El contenido de este sitio web puede ser distribuido
+                    sin necesidad de consultar al propietario, siempre que
+                    se haga una cita de la URL del mismo
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
