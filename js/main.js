@@ -2,14 +2,7 @@ $(document).ready(function() {
     tema()
 })
 
-function leerJson(archivo, callback) {
-    $.getJSON(archivo, function(data) {
-        callback(data)
-    }).fail(function() {
-        console.log('ERROR: al leer ' + archivo)
-    })
-}
-
+/** Define el tema claro u obscuro */
 function tema() {
     if (localStorage.getItem('darkMode') === 'true') {
         $('html').attr('data-theme', 'dark')
@@ -30,8 +23,19 @@ function tema() {
     })
 }
 
+/** Cambia los iconos para estar a corde al tema */
 function cambioIconos(color) {
-    $('#github-logo').attr('src', `/assets/svg/github-${color}.svg`)
-    $('#linkedin-logo').attr('src', `/assets/svg/linkedin-${color}.svg`)
-    $('#info-logo').attr('src', `/assets/svg/info-${color}.svg`)
+    let iconos = [
+        'github',
+        'linkedin',
+        'info'
+    ]
+    iconos.forEach(icono => {
+        let viejoLogo = $(`#${icono}-logo`).attr('src')
+        let nuevoLogo = viejoLogo.replace(
+            color === 'white' ? 'black' : 'white',
+            color
+        )
+        $(`#${icono}-logo`).attr('src', nuevoLogo)
+    })
 }
