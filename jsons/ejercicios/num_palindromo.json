@@ -1,9 +1,0 @@
-{
-    "titulo": "Numero palindromo",
-    "id": "num-palindromo",
-    "tags": [
-        "JavaScript",
-        "Ejercicios"
-    ],
-    "solucion": "numPalindromo.png"
-}

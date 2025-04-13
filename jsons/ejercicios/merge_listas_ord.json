@@ -1,9 +1,0 @@
-{
-    "titulo": "Mezcla dos listas ordenadas",
-    "id": "merge-listas-ord",
-    "tags": [
-        "JavaScript",
-        "Ejercicios"
-    ],
-    "solucion": "mergeListasOrd.png"
-}
