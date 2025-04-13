@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="../css/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="../css/bulma/bulma_switch.css" />
+    <link rel="stylesheet" href="../css/bulma/dataTables.bulma.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    
+</head>
+<script src="../js/jquery/jquery-3.7.1.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/portafolio.js"></script>
+<script src="../js/proyectos.js"></script>
+<script src="../js/ejercicios.js"></script>
+<script src="../js/dataTables/dataTables.min.js"></script>
+<script src="../js/dataTables/dataTables.bulma.min.js"></script>
+
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../index.html">
+                <h2 class="title bruno-ace-sc-regular">Diego</h2>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../index.html">Inicio</a>
+
+                <a class="navbar-item" href="./portafolio.html">Proyectos</a>
+
+                <a class="navbar-item" href="./portafolio.html#ejercicios">Ejercicios</a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Mas</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="./about.html">
+                            Sobre mí
+                        </a>
+                        <a class="navbar-item" href="./about.html#experiencia-laboral">
+                            Experiencia laboral
+                        </a>
+                        <a class="navbar-item" href="./about.html#contacto">
+                            Contacto
+                        </a>
+                        <hr class="navbar-divider" />
+                        <a class="navbar-item" href="#">
+                            Créditos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <label class="switch is-rounded">
+                        <input type="checkbox" value="false" id="dark-mode"/>
+                        <span class="check"></span>
+                        <span class="control-label is-size-7">Dark<br/>mode</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Proyectos -->
+    <section class="section">
+        <div class="container">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">PROYECTOS</h1>
+            </div>
+
+            <div id="proyectos" class="row columns is-multiline">
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejercicios -->
+    <section id="ejercicios" class="section">
+        <div class="container">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">EJERCICIOS</h1>
+            </div>
+            <div class="column is-12 table-container box">
+                <table id="tab-ejercicios" class="table is-bordered is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Dificultad</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ls-ejercicios">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-4 card-contet">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="mb-5">
+                    <h3 class="title is-size-5">Diego Zamora 2025</h3>
+                    <p class="subtitle is-size-6">Programador Jr</p>
+                </div>
+                <div class="soc">
+                    <a
+                        href="https://github.com/diegozdgl10"
+                        target="_blank"
+                    >
+                        <img id="github-logo" src="../assets/svg/github-black.svg" width="35"/>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                        target="_blank"
+                    >
+                        <img id="linkedin-logo" src="../assets/svg/linkedin-black.svg" width="35"/>
+                    </a>
+                    <a href="./about.html">
+                        <img id="info-logo" src="../assets/svg/info-black.svg" width="35"/>
+                    </a>
+                </div>
+                <div class="mt-5">
+                    El contenido de este sitio web puede ser distribuido
+                    sin necesidad de consultar al propietario, siempre que
+                    se haga una cita de la URL del mismo
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
