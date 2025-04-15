@@ -28,7 +28,8 @@ function cambioIconos(color) {
     let iconos = [
         'github',
         'linkedin',
-        'info'
+        'info',
+        'gd',
     ]
     iconos.forEach(icono => {
         let viejoLogo = $(`#${icono}-logo`).attr('src')
