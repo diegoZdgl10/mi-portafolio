@@ -1,8 +1,3 @@
-$(document).ready(function() {
-    pruebas()
-})
-
-
 function parentesisCorrectos(s) {
     let apertura = {
         '{': 1,
@@ -32,18 +27,4 @@ function parentesisCorrectos(s) {
         }
     }
     return stack.length == 0
-}
-
-function pruebas() {
-    console.log(parentesisCorrectos('[{}(())]'))
-    // Output: true
-    
-    console.log(parentesisCorrectos('[]()(){}'))
-    // Output: true
-
-    console.log(parentesisCorrectos('[{}()}'))
-    // Output: false
-
-    console.log(parentesisCorrectos('}}]]'))
-    // Output: false
 }

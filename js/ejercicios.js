@@ -22,7 +22,7 @@ const ejercicios = [
         'solucion': 'merge_listas_ord'
     },
     {
-        'titulo': 'Numero palindromo',
+        'titulo': 'Número palíndromo',
         'descripcion': 'Dado un número, determina si es un palíndromo',
         'dificultad': 'Fácil',
         'tags': [
