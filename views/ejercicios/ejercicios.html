@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="../../css/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="../../css/bulma/bulma_switch.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/prism/prism.css" />
+    <link rel="stylesheet" href="../../css/prism/prism-one-light.css" />
+    <link rel="stylesheet" href="../../css/katex/katex.min.css">
+</head>
+<script src="../../js/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../js/prism/prism.js"></script>
+<script src="../../js/prism/prism_btn_copiar.js"></script>
+<script src="../../js/main.js"></script>
+<script defer src="../../js/katex/katex.min.js"></script>
+<script defer src="../../js/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../../index.html">
+                <img id="gd-logo" src="../../assets/imgs/GD-black.png"/>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../../index.html">Inicio</a>
+
+                <a class="navbar-item" href=".././portafolio.html">Proyectos</a>
+
+                <a class="navbar-item" href=".././portafolio.html#ejercicios">Ejercicios</a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Mas</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href=".././about.html">
+                            Sobre mí
+                        </a>
+                        <a class="navbar-item" href=".././about.html#experiencia-laboral">
+                            Experiencia laboral
+                        </a>
+                        <a class="navbar-item" href=".././about.html#contacto">
+                            Contacto
+                        </a>
+                        <hr class="navbar-divider" />
+                        <a class="navbar-item" href="#">
+                            Créditos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <label class="switch is-rounded">
+                        <input type="checkbox" value="false" id="dark-mode"/>
+                        <span class="check"></span>
+                        <span class="control-label is-size-7">Dark<br/>mode</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ejercicio -->
+    <section class="section">
+        <div class="container">
+            <!-- Titulo -->
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">DOS SUMAS</h1>
+            </div>
+
+            </br>
+            
+            <!-- Descripcion -->
+            <div class="column is-12">
+                <div>
+                    <h2 class="title is-size-4">Descripcion:</h2>
+                    <p>
+                        Dado un array de enteros <code>nums</code> y un entero <code>objetivo</code>,
+                        devolver los índices de los dos números tales que sumen <code>objetivo</code>.
+                    </p>
+                    <p>
+                        No se puede utilizar el mismo elemento dos veces.
+                    </p>
+                </div>
+                <div class="mt-5">
+                    <div class="columns is-multiline">
+                        <div class="column is-4 is-link">
+                            <h3 class="subtitle is-size-6"><b>Ejemplo 1</b></h3>
+                            <pre class="language-javascript">
+                                <code>
+                                    /* Entrada */
+                                    nums = [2,7,11,15]
+                                    objetivo = 9
+                                </code>
+                            </pre>
+                            <pre class="language-javascript">
+                                <code>
+                                    /* Salida */
+                                    [0,1] // Porque 2+7=9
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="column is-4 is-link">
+                            <h3 class="subtitle is-size-6"><b>Ejemplo 2</b></h3>
+                            <pre class="language-javascript">
+                                <code>
+                                    /* Entrada */
+                                    nums = [3,3]
+                                    objetivo = 6
+                                </code>
+                            </pre>
+                            <pre class="language-javascript">
+                                <code>
+                                    /* Salida */
+                                    [0,1] // Porque 3+3=6
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="column is-4 is-link">
+                            <h3 class="subtitle is-size-6"><b>Ejemplo 3</b></h3>
+                            <pre class="language-javascript">
+                                <code>
+                                    /* Entrada */
+                                    nums = [3,1]
+                                    objetivo = 6
+                                </code>
+                            </pre>
+                            <pre class="language-javascript">
+                                <code>
+                                    /* Salida */
+                                    null // Porque no hay forma de sumar 6
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </br>
+            
+            <!-- Solucion -->
+            <div>
+                <div class="column is-12">
+                    <h2 class="title is-size-4">Solución:</h2>
+                </div>
+
+                <div class="columns is-multiline">
+                    <!-- Implementacion -->
+                    <div class="column is-8 code-container" style="position: relative;">
+                        <button class="button is-info is-small copy-btn">Copiar</button>
+                        <button class="button is-info is-outlined info-languaje">JavaScript</button>
+                        <pre class="language-javascript line-numbers">
+                            <code>
+                                function dosSumas(nums, objetivo) {
+                                    for (let i = 0; i < nums.length-1; i++) {
+                                        for (let j = 1; j < nums.length; j++) {
+                                            if (nums[i] + nums[j] == objetivo) {
+                                                return [i, j]
+                                            }
+                                        }
+                                    }
+                                    return null
+                                }
+                            </code>
+                        </pre>
+                    </div>
+
+                    <!-- Complejidad -->
+                    <div class="column is-4">
+                        <h3 class="title is-size-5">Complejidad</h3>
+                        <div>
+                            <p>
+                                <b>Tiempo:</b> <br/>
+                            </p>
+                            <p class="is-size-5 ml-3 mt-3">
+                                \( O(n^2) \)
+                            </p>
+                        </div>
+                        <hr/>
+                        <div>
+                            <p>
+                                <b>Espacio:</b> <br/>
+                            </p>
+                            <p class="is-size-5 ml-3 mt-3">
+                                \( O(n) \)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <!-- Prueba -->
+            <div>
+                <div class="column is-12">
+                    <h2 class="title is-size-4">Prueba:</h2>
+                </div>
+                
+                <div class="columns is-multiline p-4">
+                    <div class="column is-6">
+                        <div class="field">
+                            <label for="input" class="title is-size-5">
+                                Entrada:
+                            </label>
+                            <div class="control">
+                                <textarea
+                                name="input"
+                                id="input"
+                                class="textarea is-primary is-normal"
+                                required
+                                >{nums=[2,7,11,15], objetivo=9}</textarea>
+                            </div>
+                        </div>
+                        <div class="control">
+							<button class="button is-primary is-fullwidth has-text-weight-medium is-medium">
+                                Ejecutar
+                            </button>
+						</div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="title is-size-5">
+                                Salida:
+                            </label>
+                            <pre class="language-plain">
+                                <code id="salida">
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-4 card-contet">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="mb-5">
+                    <h3 class="title is-size-5">Diego Zamora 2025</h3>
+                    <p class="subtitle is-size-6">Programador Jr</p>
+                </div>
+                <div class="soc">
+                    <a
+                        href="https://github.com/diegozdgl10" target="_blank"
+                        target="_blank"
+                    >
+                        <img id="github-logo" src="../../assets/svg/github-black.svg" width="35"/>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                        target="_blank"
+                    >
+                        <img id="linkedin-logo" src="../../assets/svg/linkedin-black.svg" width="35"/>
+                    </a>
+                    <a href=".././about.html">
+                        <img id="info-logo" src="../../assets/svg/info-black.svg" width="35"/>
+                    </a>
+                </div>
+                <div class="mt-5">
+                    El contenido de este sitio web puede ser distribuido
+                    sin necesidad de consultar al propietario, siempre que
+                    se haga una cita de la URL del mismo
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

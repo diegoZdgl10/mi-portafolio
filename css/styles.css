@@ -49,3 +49,16 @@
     content: ' *';
     color: #ff3860;
 }
+
+.copy-btn {
+    position: absolute;
+    top: 2.5em;
+    right: 1.5em;
+    z-index: 10;
+}
+
+.info-languaje {
+    position: absolute;
+    top: -.8em;
+    right: .8em;
+}
