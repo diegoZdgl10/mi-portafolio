@@ -7,9 +7,12 @@
 }
 
 .has-background-image::before {
-    content: "";
+    content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
@@ -21,14 +24,14 @@
 
 /*  Fuente Bruno Ace SC */
 @font-face {
-    font-family: "Bruno Ace SC";
+    font-family: 'Bruno Ace SC';
     src: url('../assets/fonts/BrunoAceSC-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 .bruno-ace-sc-regular {
-    font-family: "Bruno Ace SC", sans-serif;
+    font-family: 'Bruno Ace SC', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -41,7 +44,7 @@
 }
 
 /* Asterisco para campos requeridos */
-.required.line{
+.required.line {
     text-decoration: underline #ff3860;
 }
 
@@ -59,6 +62,18 @@
 
 .info-languaje {
     position: absolute;
-    top: -.8em;
-    right: .8em;
+    top: -0.8em;
+    right: 0.8em;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 1.5em;
+}
+
+.custom-list li::before {
+    content: '•';
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
