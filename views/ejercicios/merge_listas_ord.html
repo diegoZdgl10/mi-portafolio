@@ -1,38 +1,294 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="../../css/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="../../css/bulma/bulma_switch.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/prism/prism.css" />
+    <link rel="stylesheet" href="../../css/prism/prism-one-light.css" />
+    <link rel="stylesheet" href="../../css/katex/katex.min.css">
 </head>
-<script src="/js/jquery/jquery-3.7.1.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/cargaComponente.js"></script>
-<script src="/js/ejercicios/mergeListasOrdenadas.js"></script>
+<script src="../../js/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../js/prism/prism.js"></script>
+<script src="../../js/prism/prism_btn_copiar.js"></script>
+<script src="../../js/main.js"></script>
+<script defer src="../../js/katex/katex.min.js"></script>
+<script defer src="../../js/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
 <body>
     <!-- Navbar -->
-    <nav id="navbar">
-    </nav> 
-
-    <!-- Ejercicio -->
-    <div>
-        <h1 id="titulo">Mezcla dos listas ordenadas</h1>
-        <div id="tags">
-        </div>
-        
-        <div id="descripcion">
-            <h4>Descripcion:</h4>
-            <p>Se dan dos listas ordenadas, <code>lista1</code> y <code>lista2</code>.</p>
-            <p>Fusionar las dos listas en una lista ordenada.</p>
+    <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../../index.html">
+                <img id="gd-logo" src="../../assets/imgs/GD-black.png"/>
+            </a>
         </div>
 
-        <div>
-            <h4>Solucion:</h4>
-            <img src="/assets/mergeListasOrd.png" width="50%" id="solucion">
-        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../../index.html">Inicio</a>
 
-        <!-- TODO buscar forma de como mostrar la entrada y salida-->
-    </div>
+                <a class="navbar-item" href=".././portafolio.html">Proyectos</a>
+
+                <a class="navbar-item" href=".././portafolio.html#ejercicios">Ejercicios</a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Mas</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href=".././about.html">
+                            Sobre mí
+                        </a>
+                        <a class="navbar-item" href=".././about.html#experiencia-laboral">
+                            Experiencia laboral
+                        </a>
+                        <a class="navbar-item" href=".././about.html#contacto">
+                            Contacto
+                        </a>
+                        <hr class="navbar-divider" />
+                        <a class="navbar-item" href="#">
+                            Créditos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <label class="switch is-rounded">
+                        <input type="checkbox" value="false" id="dark-mode"/>
+                        <span class="check"></span>
+                        <span class="control-label is-size-7">Dark<br/>mode</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Titulo -->
+    <section class="section">
+        <div class="container">
+            <div class="column is-12">
+                <h1 class="title has-text-centered section-title">MEZCLA DOS LISTAS ORDENADAS</h1>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Descripcion -->
+    <section class="section">
+        <div class="container">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Descripción:</h2>
+            </div>
+            <div class="column is-12">
+                <p>
+                    Se dan dos listas ordenadas, <code>lista1</code> y <code>lista2</code>.
+                </p>
+                <p>
+                    Fusionar las dos listas en una lista ordenada.
+                </p>
+            </div>
+            <!-- Ejemplos -->
+            <div class="columns is-multiline mt-5">
+                <div class="column is-4 is-link">
+                    <h3 class="subtitle is-size-6"><b>Ejemplo 1</b></h3>
+                    <pre class="language-javascript">
+                        <code>
+                            /* Entrada */
+                            lista1 = [2,7,11,15]
+                            lista2 = []
+                        </code>
+                    </pre>
+                    <pre class="language-javascript">
+                        <code>
+                            /* Salida */
+                            [2,7,11,15]
+                        </code>
+                    </pre>
+                </div>
+                <div class="column is-4 is-link">
+                    <h3 class="subtitle is-size-6"><b>Ejemplo 2</b></h3>
+                    <pre class="language-javascript">
+                        <code>
+                            /* Entrada */
+                            lista1 = [3,4,4]
+                            lista2 = [-1,0,15]
+                        </code>
+                    </pre>
+                    <pre class="language-javascript">
+                        <code>
+                            /* Salida */
+                            [-1,0,3,4,4,15]
+                        </code>
+                    </pre>
+                </div>
+                <div class="column is-4 is-link">
+                    <h3 class="subtitle is-size-6"><b>Ejemplo 3</b></h3>
+                    <pre class="language-javascript">
+                        <code>
+                            /* Entrada */
+                            lista1 = [1,2,3,4,5]
+                            lista2 = [3,4,5,6,7]
+                        </code>
+                    </pre>
+                    <pre class="language-javascript">
+                        <code>
+                            /* Salida */
+                            [1,2,3,3,4,4,5,5,6,7]
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Solucion -->
+    <section class="section">
+        <div class="container">        
+            <div class="column is-12">
+                <h2 class="title is-size-4">Solución:</h2>
+            </div>
+            <div class="columns is-multiline">
+                <!-- Implementacion -->
+                <div class="column is-8 code-container" style="position: relative;">
+                    <button class="button is-link info-languaje">JavaScript</button>
+                    <button class="button is-link is-small copy-btn">Copiar</button>
+                    <pre class="language-javascript line-numbers">
+                        <code>
+                            function mergeListasOrdenadas(lista1, lista2) {
+                                return mergeListas(lista1, lista2, [])
+                            }
+                            
+                            function mergeListas(lista1, lista2, mezcla) {
+                                if (lista1.length == 0) {
+                                    return mezcla.concat(lista2)
+                                }
+                                if (lista2.length == 0) {
+                                    return mezcla.concat(lista1)
+                                }
+                                if (lista1[0] < lista2[0]) {
+                                    mezcla.push(lista1[0])
+                                    lista1.splice(0, 1)
+                                } else {
+                                    mezcla.push(lista2[0])
+                                    lista2.splice(0, 1)
+                                }
+                                return mergeListas(lista1, lista2, mezcla)
+                            }
+                        </code>
+                    </pre>
+                </div>
+
+                <!-- Complejidad -->
+                <div class="column is-4">
+                    <h3 class="title is-size-5">Complejidad</h3>
+                    <div>
+                        <p>
+                            <b>Tiempo:</b> <br/>
+                        </p>
+                        <p class="is-size-5 ml-3 mt-3">
+                            \( O(n) \)
+                        </p>
+                    </div>
+                    <hr/>
+                    <div>
+                        <p>
+                            <b>Espacio:</b> <br/>
+                        </p>
+                        <p class="is-size-5 ml-3 mt-3">
+                            \( O(n) \)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Prueba -->
+    <!--
+    <section class="section">
+        <div class="container">
+            <div class="column is-12">
+                <h2 class="title is-size-4">Prueba:</h2>
+            </div>           
+            <div class="columns is-multiline p-4">
+                -->
+                <!-- Entrada -->
+                <!--
+                <div class="column is-6">
+                    <div class="field">
+                        <label for="input" class="title is-size-6">
+                            Entrada
+                        </label>
+                        <div class="control mt-2">
+                            <textarea
+                            name="input"
+                            id="input"
+                            class="textarea is-primary is-normal"
+                            required
+                            >{nums=[2,7,11,15], objetivo=9}</textarea>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary is-fullwidth has-text-weight-medium is-medium">
+                            Ejecutar
+                        </button>
+                    </div>
+                </div>
+                -->
+                <!-- Salida -->
+                <!--
+                <div class="column is-6">
+                    <div class="field">
+                        <label class="title is-size-6">
+                            Salida
+                        </label>
+                        <pre class="language-plain">
+                            <code id="salida">
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer class="footer mt-4 card-contet">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="mb-5">
+                    <h3 class="title is-size-5">Diego Zamora 2025</h3>
+                    <p class="subtitle is-size-6">Programador Jr</p>
+                </div>
+                <div class="soc">
+                    <a
+                        href="https://github.com/diegozdgl10" target="_blank"
+                        target="_blank"
+                    >
+                        <img id="github-logo" src="../../assets/svg/github-black.svg" width="35"/>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                        target="_blank"
+                    >
+                        <img id="linkedin-logo" src="../../assets/svg/linkedin-black.svg" width="35"/>
+                    </a>
+                    <a href=".././about.html">
+                        <img id="info-logo" src="../../assets/svg/info-black.svg" width="35"/>
+                    </a>
+                </div>
+                <div class="mt-5">
+                    El contenido de este sitio web puede ser distribuido
+                    sin necesidad de consultar al propietario, siempre que
+                    se haga una cita de la URL del mismo
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
