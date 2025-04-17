@@ -22,47 +22,63 @@
 <body>
     <!-- Navbar -->
     <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="../index.html">
-                <img id="gd-logo" src="../assets/imgs/GD-black.png"/>
-            </a>
-        </div>
-
-        <div class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="../index.html">Inicio</a>
-
-                <a class="navbar-item" href="./portafolio.html">Proyectos</a>
-
-                <a class="navbar-item" href="./portafolio.html#ejercicios">Ejercicios</a>
-
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">Mas</a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="./about.html">
-                            Sobre mí
-                        </a>
-                        <a class="navbar-item" href="./about.html#experiencia-laboral">
-                            Experiencia laboral
-                        </a>
-                        <a class="navbar-item" href="./about.html#contacto">
-                            Contacto
-                        </a>
-                        <hr class="navbar-divider" />
-                        <a class="navbar-item" href="#">
-                            Créditos
-                        </a>
-                    </div>
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <img id="gd-logo" src="../assets/imgs/GD-black.png"/>
+                    <h2 class="title bruno-ace-sc-regular" style="font-size: 1.5rem">Diego</h2>
+                </a>
+                <div class="navbar-burger burger" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </div>
             </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../index.html">Inicio</a>
 
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <label class="switch is-rounded">
-                        <input type="checkbox" value="false" id="dark-mode"/>
-                        <span class="check"></span>
-                        <span class="control-label is-size-7">Dark<br/>mode</span>
-                    </label>
+                    <a class="navbar-item" href="../views/portafolio.html">Proyectos</a>
+
+                    <a class="navbar-item" href="../views/portafolio.html#ejercicios">Ejercicios</a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Mas</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="../views/about.html">
+                                Sobre mí
+                            </a>
+                            <a class="navbar-item" href="../views/about.html#experiencia-laboral">
+                                Experiencia laboral
+                            </a>
+                            <a class="navbar-item" href="../views/about.html#contacto">
+                                Contacto
+                            </a>
+                            <hr class="navbar-divider" />
+                            <a class="navbar-item" href="#">
+                                Créditos
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Tema</a>
+                        <div class="navbar-dropdown">
+                            <a id="tema-sistema" class="navbar-item btn-image">
+                                <img id="sistema-logo"class="mr-3" width="20" src="../assets/svg/system-black.svg"/>
+                                Sistema
+                            </a>
+                            <a id="tema-claro" class="navbar-item btn-image">
+                                <img id="claro-logo"class="mr-3" width="20" src="../assets/svg/sun-black.svg"/>
+                                Claro
+                            </a>
+                            <a id="tema-obscuro" class="navbar-item btn-image">
+                                <img id="obscuro-logo"class="mr-3" width="20" src="../assets/svg/moon-black.svg"/>
+                                Obscuro
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

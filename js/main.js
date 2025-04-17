@@ -20,18 +20,13 @@ function menuAmburguesa() {
 
 /** Define el tema claro u obscuro */
 function tema() {
-    if (localStorage.getItem('darkMode') === null) {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-            cambioTema('light')
-        } else {
-            cambioTema('dark')
-        }
-    } else {
-        if (localStorage.getItem('darkMode'), false) {
-            cambioTema('light')
-        } else {
-            cambioTema('dark')
-        }
+    let darkMode = localStorage.getItem('darkMode')
+    if ((darkMode === null || darkMode === 'null') &&
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        cambioTema('dark')
+    }
+    if (darkMode === 'true') {
+        cambioTema('dark')
     }
 
     $('#tema-sistema').on('click', function() {
