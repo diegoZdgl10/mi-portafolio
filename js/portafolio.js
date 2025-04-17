@@ -67,7 +67,7 @@ function generaFila(ejercicio) {
             ${ejercicio.descripcion}
         </td>
         <td class="${colorDificultad(ejercicio.dificultad)}">
-            ${ejercicio.dificultad}
+            <b>${ejercicio.dificultad}</b>
         </td>
         <td>
             ${generaTags(ejercicio.tags)}
