@@ -1,3 +1,13 @@
+:root {
+    --white: whitesmoke;
+    --black: #363636;
+    --cyan: #00d1b2;
+    --blue: #3273dc;
+    --green: #23d160;
+    --yellow: #ffdd57;
+    --red: #ff3860;
+}
+
 /* Imagen de presentacion */
 .has-background-image {
     background-image: url('../assets/imgs/keyboard.jpg');
@@ -45,12 +55,12 @@
 
 /* Asterisco para campos requeridos */
 .required.line {
-    text-decoration: underline #ff3860;
+    text-decoration: underline var(--red);
 }
 
 .required:after {
     content: ' *';
-    color: #ff3860;
+    color: var(--red);
 }
 
 .copy-btn {
