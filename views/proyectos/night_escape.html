@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="../../css/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="../../css/bulma/bulma_switch.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<script src="../../js/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../js/main.js"></script>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../../index.html">
+                    <img id="gd-logo" src="../../assets/imgs/GD-black.png"/>
+                    <h2 class="title bruno-ace-sc-regular" style="font-size: 1.5rem">Diego</h2>
+                </a>
+                <div class="navbar-burger burger" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../../index.html">Inicio</a>
+
+                    <a class="navbar-item" href="../../views/portafolio.html">Proyectos</a>
+
+                    <a class="navbar-item" href="../../views/portafolio.html#ejercicios">Ejercicios</a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Mas</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="../../views/about.html">
+                                Sobre mí
+                            </a>
+                            <a class="navbar-item" href="../../views/about.html#experiencia-laboral">
+                                Experiencia laboral
+                            </a>
+                            <a class="navbar-item" href="../../views/about.html#contacto">
+                                Contacto
+                            </a>
+                            <hr class="navbar-divider" />
+                            <a class="navbar-item" href="#">
+                                Créditos
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Tema</a>
+                        <div class="navbar-dropdown">
+                            <a id="tema-sistema" class="navbar-item btn-image">
+                                <img id="sistema-logo"class="mr-3" width="20" src="../../assets/svg/system-black.svg"/>
+                                Sistema
+                            </a>
+                            <a id="tema-claro" class="navbar-item btn-image">
+                                <img id="claro-logo"class="mr-3" width="20" src="../../assets/svg/sun-black.svg"/>
+                                Claro
+                            </a>
+                            <a id="tema-obscuro" class="navbar-item btn-image">
+                                <img id="obscuro-logo"class="mr-3" width="20" src="../../assets/svg/moon-black.svg"/>
+                                Obscuro
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Proyecto -->
+    <section class="section">
+        <!-- Presentacion -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">Night Escape</h1>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-5">
+                    <p class="mb-1">
+                        Night Escape es un videojuego del género Dungeon,
+                        con tintes de terror y misterio. En este juego, el
+                        protagonista despierta de una siesta solo para
+                        descubrir que las instalaciones en las que se
+                        encuentra están completamente vacías. Deberá
+                        entonces explorar el edificio para intentar salir y
+                        descubrir qué sucedió con los demás. Sin embargo, no
+                        estará realmente solo, pues algo o alguien lo acecha
+                        en todo momento.
+                    </p>
+                </div>
+                <div class="column is-7">
+                    <figure>
+                        <img src="../../assets/imgs/night_escape/Preview.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla principal</b>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tecnologias utilizadas -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Tecnologías utilizadas:</h2>
+            </div>
+            <div class="column is-12">
+                <p>
+                    Este proyecto personal fue desarrollado en
+                    <b>C#</b> utilizando el motor <b>Unity</b>. Se
+                    combinaron conocimientos de programación con dibujo
+                    digital tipo pixel art. La estética 2D con vista
+                    top-down fue lograda utilizando <b>LibreSprite</b>, y en
+                    menor medida, <b>Gimp</b>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Mecanicas del juego -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Mecánicas del juego:</h2>
+            </div>
+            <div class="column is-12">
+                <p>
+                    Para este prototipo se definieron las siguientes reglas:
+                </p>
+                <ol class="ml-5">
+                    <li>
+                        El jugador puede moverse en las cuatro direcciones
+                        (arriba, abajo, izquierda, derecha) usando las
+                        teclas <i>W</i>, <i>A</i>, <i>S</i> y <i>D</i>,
+                        similar a juegos como
+                        <i>The Legend of Zelda: A Link to the Past</i>.
+                    </li>
+                    <li>El personaje no puede correr ni saltar.</li>
+                    <li>
+                        Al presionar <i>P</i>, se accede al menú de pausa, el
+                        cual congela por completo el estado del juego.
+                    </li>
+                    <li>
+                        Hay objetos con los que se puede interactuar,
+                        mientras que otros son solo decorativos.
+                    </li>
+                    <li>
+                        Para atacar o aceptar en los menús se usa la tecla
+                        <i>K</i>.
+                    </li>
+                    <li>
+                        Para interactuar o rechazar en los menús se usa la
+                        tecla <i>L</i>.
+                    </li>
+                    <li>
+                        Al recibir daño, la barra de vida disminuye 1/5 y el
+                        personaje queda paralizado momentáneamente.
+                    </li>
+                    <li>La partida termina si la salud llega a cero.</li>
+                    <li>
+                        Desde el menú de pausa se puede acceder al
+                        inventario.
+                    </li>
+                    <li>
+                        Los objetos recolectados se almacenan en un
+                        inventario con capacidad infinita.
+                    </li>
+                    <li>
+                        La cantidad de ítems es finita; no se generan
+                        nuevos.
+                    </li>
+                    <li>
+                        El jugador puede detener temporalmente a los
+                        enemigos, pero no eliminarlos de forma directa.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Capturas de pantalla -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Capturas de pantalla:</h2>
+            </div>
+            <div>
+                <p class="mb-2">
+                    Antes de implementar el prototipo, se realizaron una
+                    serie de mockups para definir mejor la idea y tener una
+                    visión clara de la interfaz de usuario deseada.
+                </p>
+            </div>
+            <div class="column is-10 is-offset-1 mb-3">
+                <figure class="image is-16by9">
+                    <iframe
+                        class="has-ratio"
+                        width="640"
+                        height="360"
+                        src="https://www.youtube.com/embed/rN-eCDGIudQ?si=V7NsL1kmJ0AJSttt"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+                <figcaption class="is-size-7 has-text-centered">
+                    <b>Mockups del prototipo</b>
+                </figcaption>
+            </div>
+            <br/>
+            <div>
+                <p class="mb-2">
+                    Cuando la implementación del prototipo finaliz, el
+                    resultado final es el mostrado a continuacion.
+                </p>
+            </div>
+            <div class="column is-10 is-offset-1 mb-3">
+                <figure class="image is-16by9">
+                    <iframe
+                        class="has-ratio"
+                        width="640"
+                        height="360"
+                        src="https://www.youtube.com/embed/ynqLs7hjj7k?si=cLr5kNMJQoYN4aKm"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+                <figcaption class="is-size-7 has-text-centered">
+                    <b>Demo del prototipo</b>
+                </figcaption>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/night_escape/PantallaCarga.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla de controles</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/night_escape/DanioAEnemigo.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Daño generado a los enemigos</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/night_escape/DanioAJugador.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Daño por parte de los enemigos</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/night_escape/ExistenciaDeInventario.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Interacción con el entorno</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/night_escape/GameOver.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla de Game Over</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/night_escape/PantallaGanadora.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla de victoria al llegar al final</b>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pruebas y retroalimentacion -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Pruebas y retroalimentación:</h2>
+            </div>
+            <div class="column is-12">
+                <p>
+                    Gracias a un cuestionario anónimo aplicado a los
+                    usuarios que probaron el juego, y a la observación
+                    directa de sus interacciones, se pudieron obtener las
+                    siguientes conclusiones:
+                </p>
+                <ul class="custom-list">
+                    <li>
+                        En general, el concepto fue bien recibido y se
+                        reconoció su potencial para convertirse en un
+                        proyecto más ambicioso. No obstante, la
+                        implementación quedó por debajo de lo esperado
+                        debido a la complejidad del diseño inicial y a la
+                        falta de tiempo.
+                    </li>
+                    <li>
+                        Por ejemplo, el sistema de inventario no se terminó,
+                        lo que dificultaba que los jugadores pudieran
+                        curarse y continuar. Además, no se logró contar la
+                        historia planeada para el juego, lo que afectó el interés
+                        por llegar al final.
+                    </li>
+                    <li>
+                        El concepto del juego tiene potencial, pero la
+                        implementación no alcanzó los objetivos debido a
+                        limitaciones de tiempo y recursos.
+                    </li>
+                    <li>
+                        Para un proyecto escolar, habría sido más apropiado
+                        enfocarse en una idea más simple con una mecánica
+                        clara y entretenida, en lugar de intentar integrar
+                        una narrativa compleja.
+                    </li>
+                    <li>
+                        Juegos como Tetris o Pac-Man son buenos ejemplos
+                        de cómo la simplicidad puede llevar a experiencias
+                        divertidas y memorables.
+                    </li>
+                </ul>
+                <p>
+                    Con este proyecto se aprendió mucho, tanto a nivel
+                    técnico como en la planificación y dimensionamiento de
+                    ideas. El equipo espera aplicar estos aprendizajes en
+                    futuros proyectos para lograr productos de mayor
+                    calidad.
+                </p>
+            </div>
+        </div>
+
+        <!-- Codigo del proyecto -->
+        <a href="https://github.com/diegodgl10/NightEscape"
+            class="button is-info btn-float"
+            target="_blank">
+            &lt;/&gt; Código
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-4 card-contet">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="mb-5">
+                    <h3 class="title is-size-5">Diego Zamora 2025</h3>
+                    <p class="subtitle is-size-6">Programador Jr</p>
+                </div>
+                <div class="soc">
+                    <a
+                        href="https://github.com/diegozdgl10" target="_blank"
+                        target="_blank"
+                    >
+                        <img id="github-logo" src="../../assets/svg/github-black.svg" width="35"/>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                        target="_blank"
+                    >
+                        <img id="linkedin-logo" src="../../assets/svg/linkedin-black.svg" width="35"/>
+                    </a>
+                    <a href=".././about.html">
+                        <img id="info-logo" src="../../assets/svg/info-black.svg" width="35"/>
+                    </a>
+                </div>
+                <div class="mt-5">
+                    El contenido de este sitio web puede ser distribuido
+                    sin necesidad de consultar al propietario, siempre que
+                    se haga una cita de la URL del mismo
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
