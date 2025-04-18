@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="../../css/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="../../css/bulma/bulma_switch.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<script src="../../js/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../js/main.js"></script>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../../index.html">
+                    <img id="gd-logo" src="../../assets/imgs/GD-black.png"/>
+                    <h2 class="title bruno-ace-sc-regular" style="font-size: 1.5rem">Diego</h2>
+                </a>
+                <div class="navbar-burger burger" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../../index.html">Inicio</a>
+
+                    <a class="navbar-item" href="../../views/portafolio.html">Proyectos</a>
+
+                    <a class="navbar-item" href="../../views/portafolio.html#ejercicios">Ejercicios</a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Mas</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="../../views/about.html">
+                                Sobre mí
+                            </a>
+                            <a class="navbar-item" href="../../views/about.html#experiencia-laboral">
+                                Experiencia laboral
+                            </a>
+                            <a class="navbar-item" href="../../views/about.html#contacto">
+                                Contacto
+                            </a>
+                            <hr class="navbar-divider" />
+                            <a class="navbar-item" href="#">
+                                Créditos
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Tema</a>
+                        <div class="navbar-dropdown">
+                            <a id="tema-sistema" class="navbar-item btn-image">
+                                <img id="sistema-logo"class="mr-3" width="20" src="../../assets/svg/system-black.svg"/>
+                                Sistema
+                            </a>
+                            <a id="tema-claro" class="navbar-item btn-image">
+                                <img id="claro-logo"class="mr-3" width="20" src="../../assets/svg/sun-black.svg"/>
+                                Claro
+                            </a>
+                            <a id="tema-obscuro" class="navbar-item btn-image">
+                                <img id="obscuro-logo"class="mr-3" width="20" src="../../assets/svg/moon-black.svg"/>
+                                Obscuro
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Proyecto -->
+    <section class="section">
+        <!-- Presentacion -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">Flee</h1>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-5">
+                    <p class="mb-1">
+                        Flee es un prototipo de videojuego del género endless runner y terror
+                        para toda la familia que mantendrá al jugador en constante tensión.
+                        En este juego el protagonista se verá atrapado en una pesadilla sin fin
+                        y tendrás que correr por los pasillos de un hospital con el fin de tratar
+                        de alcanzar la salida. Pero teniendo mucho cuidado de no chocar con obstáculos
+                        o con espectros fantasmales.
+                    </p>
+                </div>
+                <div class="column is-7">
+                    <figure>
+                        <img src="../../assets/imgs/flee/Preview.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla principal</b>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tecnologias utilizadas -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Tecnologías utilizadas:</h2>
+            </div>
+            <div class="column is-12">
+                <p>
+                    Este proyecto personal fue desarrollado en el lenguaje <b>C#</b>
+                    utilizando el motor <b>Unity</b>.
+                    Para su implementación se combinaron conocimientos de programación
+                    y modelado 3D, ya que todos los modelos utilizados para este prototipo
+                    fueron creados en <b>Blender</b>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Mecanicas del juego -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Mecánicas del juego:</h2>
+            </div>
+            <div class="column is-12">
+                <p>
+                    Para este prototipo se definieron las siguientes reglas:
+                    <ol class="ml-5">
+                        <li>El pasillo está dividido en 3 carriles.
+                            El personaje solo puede correr por uno de estos a la vez,
+                            al estilo de juegos como <i>Subway Surfers</i>.</li>
+                        <li>El personaje avanza automáticamente.</li>
+                        <li>El jugador puede moverse lateralmente con las teclas <i>A</i> y <i>D</i>.</li>
+                        <li>Puede saltar con la tecla <i>W</i>.</li>
+                        <li>Pasar por un fantasma reduce 1/3 de la cordura.</li>
+                        <li>La partida termina si la cordura llega a 0.</li>
+                        <li>Chocar con obstáculos provocará una derrota instantánea.</li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+
+        <!-- Capturas de pantalla -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Capturas de pantalla:</h2>
+            </div>
+            <div class="column is-10 is-offset-1 mb-3">
+                <figure class="image is-16by9">
+                    <iframe
+                    class="has-ratio"
+                    width="640"
+                    height="360"
+                    src="https://www.youtube.com/embed/bC25zGimUyE?si=-GwMfy67WoahB5zK"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    frameborder="0"
+                    allowfullscreen
+                    ></iframe>
+                </figure>
+                <figcaption class="is-size-7 has-text-centered">
+                    <b>Demo del prototipo</b>
+                </figcaption>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/flee/Gameplay.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla de juego</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/flee/Controles.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla de espera y controles</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/flee/GameOver-1.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla de Game Over</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/flee/GameOver-2.png"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla de Game Over</b>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pruebas y retroalimentacion -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Pruebas y retroalimentación:</h2>
+            </div>
+            <div class="column is-12">
+                <p>
+                    Como en cualquier producto de software, también se realizaron pruebas
+                    con usuarios reales para obtener retroalimentación sobre el prototipo.
+                </p>
+                <p>
+                    De dichas pruebas se concluyó que la ambientación y el concepto del juego
+                    fueron bien recibidos.
+                    No obstante, se identificaron áreas de mejora:
+                    los controles requerían mayor precisión, y los obstáculos presentaban
+                    colisiones demasiado grandes, lo cual hacía que el juego se sintiera injusto.
+                    Se propuso reducir el área de colisión para mejorar la accesibilidad
+                    y la experiencia del jugador.
+                </p>
+            </div>
+        </div>
+
+        <a href="https://github.com/diegodgl10/Flee"
+            class="button is-info btn-float"
+            target="_blank">
+            &lt;/&gt; Código
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-4 card-contet">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="mb-5">
+                    <h3 class="title is-size-5">Diego Zamora 2025</h3>
+                    <p class="subtitle is-size-6">Programador Jr</p>
+                </div>
+                <div class="soc">
+                    <a
+                        href="https://github.com/diegozdgl10" target="_blank"
+                        target="_blank"
+                    >
+                        <img id="github-logo" src="../../assets/svg/github-black.svg" width="35"/>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                        target="_blank"
+                    >
+                        <img id="linkedin-logo" src="../../assets/svg/linkedin-black.svg" width="35"/>
+                    </a>
+                    <a href=".././about.html">
+                        <img id="info-logo" src="../../assets/svg/info-black.svg" width="35"/>
+                    </a>
+                </div>
+                <div class="mt-5">
+                    El contenido de este sitio web puede ser distribuido
+                    sin necesidad de consultar al propietario, siempre que
+                    se haga una cita de la URL del mismo
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

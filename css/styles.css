@@ -92,3 +92,10 @@
     display: flex;
     align-items: center;
 }
+
+.btn-float{
+	position:fixed;
+	bottom:40px;
+	right:40px;
+	/*box-shadow: 2px 2px 3px #999;*/
+}

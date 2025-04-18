@@ -1,47 +1,7 @@
 $(document).ready(function() {
-    llenaProyetos()
-
     llenaTabla()
     configuraTabla('tab-ejercicios')
 })
-
-function llenaProyetos() {
-    let tarjetero = $('#proyectos')
-    proyectos.forEach(proyecto => {
-        for (let i = 0; i < 4; i++) {
-            tarjetero.append(generaTarjeta(proyecto))
-        }
-    })
-}
-
-function generaTarjeta(proyecto) {
-    return `
-    <div class="column is-4">
-        <div class="card large">
-            <div class="card-image">
-                <figure class="image is-16by9">
-                    <img
-                        src="${proyecto.preview}"
-                    />
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="mb-3 has-text-centered">
-                    <p class="title is-4 no-padding">${proyecto.titulo}</p>
-                </div>
-                <div class="content">
-                    ${proyecto.descripcion}
-                    <div class="mt-3">
-                        <a class="button is-info" href="${proyecto.solucion}">
-                            Visitar
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    `
-}
 
 /* Llena la tabla de ejercicios */
 function llenaTabla() {
