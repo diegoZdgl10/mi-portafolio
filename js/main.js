@@ -56,22 +56,13 @@ function temaSistema() {
 /** Funcion auxiliar para cambiar el tema */
 function cambioTema(tema) {
     $('html').attr('data-theme', tema)
-    if (tema === 'dark') {
-        cambioIconos('white')
-    } else {
-        cambioIconos('black')
-    }
-}
 
-/** Cambia los iconos para estar a corde al tema */
-function cambioIconos(color) {
     let logos = $('.invert-logo')
     logos.each(function() {
-        let viejoLogo = $(this).attr('src')
-        let nuevoLogo = viejoLogo.replace(
-            color === 'white' ? 'black' : 'white',
-            color
-        )
-        $(this).attr('src', nuevoLogo)
+        if (tema === 'dark') {
+            $(this).addClass('to-white')
+        } else {
+            $(this).removeClass('to-white')
+        }
     })
 }

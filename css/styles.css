@@ -93,9 +93,19 @@
     align-items: center;
 }
 
-.btn-float{
+.btn-float {
 	position:fixed;
 	bottom:40px;
 	right:40px;
 	/*box-shadow: 2px 2px 3px #999;*/
+}
+
+/* Transforma un .svg blanco a negro */
+.to-black {
+    filter: invert(1) brightness(0) grayscale(100%);
+}
+
+/* Transforma un .svg negro a blanco */
+.to-white {
+    filter: invert(1) brightness(2) grayscale(0%);      
 }
