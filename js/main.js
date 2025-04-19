@@ -7,12 +7,12 @@ $(document).ready(function() {
 function menuAmburguesa() {
     // The following code is based off a toggle menu by @Bradcomp
     // source: https://gist.github.com/Bradcomp/a9ef2ef322a8e8017443b626208999c1
-    var $burger = $('.burger')
-    var $menu = $('#' + $burger.data('target'))
+    let burger = $('.burger')
+    let menu = $('#' + burger.data('target'))
 
-    $burger.on('click', function() {
-        $burger.toggleClass('is-active')
-        $menu.toggleClass('is-active')
+    burger.on('click', function() {
+        burger.toggleClass('is-active')
+        menu.toggleClass('is-active')
         $('#navbar').toggleClass('is-fixed-top is-transparent is-hidden-desktop')
     })
 }
@@ -37,7 +37,7 @@ function tema() {
     $('#tema-claro').on('click', function () {
         localStorage.setItem('darkMode', 'false')
         cambioTema('light')
-    });
+    })
 
     $('#tema-obscuro').on('click', function () {
         localStorage.setItem('darkMode', 'true')
@@ -65,21 +65,13 @@ function cambioTema(tema) {
 
 /** Cambia los iconos para estar a corde al tema */
 function cambioIconos(color) {
-    let iconos = [
-        'github',
-        'linkedin',
-        'info',
-        'gd',
-        'sistema',
-        'claro',
-        'obscuro',
-    ]
-    iconos.forEach(icono => {
-        let viejoLogo = $(`#${icono}-logo`).attr('src')
+    let logos = $('.invert-logo')
+    logos.each(function() {
+        let viejoLogo = $(this).attr('src')
         let nuevoLogo = viejoLogo.replace(
             color === 'white' ? 'black' : 'white',
             color
         )
-        $(`#${icono}-logo`).attr('src', nuevoLogo)
+        $(this).attr('src', nuevoLogo)
     })
 }
