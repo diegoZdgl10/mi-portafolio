@@ -10,7 +10,7 @@
 
 /* Imagen de presentacion */
 .has-background-image {
-    background-image: url('../assets/imgs/keyboard.jpg');
+    background-image: url('../assets/imgs/keyboard.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
