@@ -1,6 +1,5 @@
 $(document).ready(function() {
     menuAmburguesa()
-    // TODO refactorizar funcion de tema()
     tema()
 })
 
@@ -21,30 +20,37 @@ function menuAmburguesa() {
 /** Define el tema claro u obscuro */
 function tema() {
     let darkMode = localStorage.getItem('darkMode')
-    if ((darkMode === null || darkMode === 'null') &&
-        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        cambioTema('dark')
-    }
-    if (darkMode === 'true') {
+    darkMode = darkMode === 'null' ? null : darkMode
+
+    // Aplica el tema inicial
+    if (darkMode === 'true' ||
+        (darkMode === null && temaSistema() === 'dark')) {
         cambioTema('dark')
     }
 
-    $('#tema-sistema').on('click', function() {
+    // Maneja los clics de los botones de tema
+    $('#tema-sistema').on('click', function () {
         localStorage.setItem('darkMode', null)
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-            cambioTema('light')
-        } else {
-            cambioTema('dark')
-        }
+        cambioTema(temaSistema())
     })
-    $('#tema-claro').on('click', function() {
-        localStorage.setItem('darkMode', false)
+
+    $('#tema-claro').on('click', function () {
+        localStorage.setItem('darkMode', 'false')
         cambioTema('light')
-    })
-    $('#tema-obscuro').on('click', function() {
-        localStorage.setItem('darkMode', true)
+    });
+
+    $('#tema-obscuro').on('click', function () {
+        localStorage.setItem('darkMode', 'true')
         cambioTema('dark')
     })
+}
+
+/** Regresa el tema del sistema */
+function temaSistema() {
+    if (window.matchMedia?.('(prefers-color-scheme: dark)').matches) {
+        return 'dark'
+    }
+    return 'light'
 }
 
 /** Funcion auxiliar para cambiar el tema */
