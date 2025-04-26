@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="../../css/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<script src="../../js/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../js/main.js"></script>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../../index.html">
+                    <img class="invert-logo" src="../../assets/imgs/GD-black.webp"/>
+                    <h2 class="title bruno-ace-sc-regular" style="font-size: 1.5rem">Diego</h2>
+                </a>
+                <div class="navbar-burger burger" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </div>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../../index.html">Inicio</a>
+
+                    <a class="navbar-item" href="../../views/portafolio.html">Proyectos</a>
+
+                    <a class="navbar-item" href="../../views/portafolio.html#ejercicios">Ejercicios</a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Mas</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="../../views/about.html">
+                                Sobre mí
+                            </a>
+                            <a class="navbar-item" href="../../views/about.html#experiencia-laboral">
+                                Experiencia laboral
+                            </a>
+                            <a class="navbar-item" href="../../views/about.html#contacto">
+                                Contacto
+                            </a>
+                            <hr class="navbar-divider" />
+                            <a class="navbar-item" href="../creditos.html">
+                                Créditos
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">Tema</a>
+                        <div class="navbar-dropdown">
+                            <a id="tema-sistema" class="navbar-item btn-image">
+                                <img class="mr-3 invert-logo" width="20" src="../../assets/svg/system-black.svg"/>
+                                Sistema
+                            </a>
+                            <a id="tema-claro" class="navbar-item btn-image">
+                                <img class="mr-3 invert-logo" width="20" src="../../assets/svg/sun-black.svg"/>
+                                Claro
+                            </a>
+                            <a id="tema-obscuro" class="navbar-item btn-image">
+                                <img class="mr-3 invert-logo" width="20" src="../../assets/svg/moon-black.svg"/>
+                                Obscuro
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Proyecto -->
+    <section class="section">
+        <!-- Presentacion -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h1 class="title has-text-centered section-title">Muro Colaborativo</h1>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-5">
+                    <p>
+                        Muro Colaborativo es un proyecto en el que colaboré junto al
+                        <a
+                            href="https://www.icat.unam.mx/" target="_blank">
+                            Instituto de Ciencias Aplicadas y Tecnología (ICAT)</a>,
+                        con el objetivo de mejorar la interacción entre profesores
+                        y alumnos mediante el desarrollo de una herramienta digital.
+                    </p>
+                </div>
+                <div class="column is-7">
+                    <figure>
+                        <img src="../../assets/imgs/muro_colaborativo/Preview.webp"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Pantalla principal</b>
+                    </figcaption>
+                </div>
+                <div class="column is-12">
+                    <p>
+                        Este proyecto consiste en una aplicación síncrona que funciona
+                        como un pizarrón virtual, permitiendo a los usuarios compartir ideas,
+                        notas y contenidos en tiempo real, fomentando una comunicación
+                        más dinámica y efectiva en entornos educativos.
+                    </p>
+                    <p>
+                        Durante mi participación, me enfoqué principalmente en tareas
+                        relacionadas con el Front-End, realizando refactorización de código
+                        para optimizar su rendimiento y legibilidad.
+                        Además, me encargué de la detección y resolución de incidencias,
+                        contribuyendo a mejorar la estabilidad y experiencia de usuario
+                        de la aplicación.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tecnologias utilizadas -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Tecnologías utilizadas:</h2>
+            </div>
+            <div class="column is-12">
+                <p>
+                    El proyecto fue desarrollado principalmente con JavaScript
+                    y se construyó sobre un entorno basado en <b>Node.js</b>,
+                    integrando diversas tecnologías para garantizar una experiencia
+                    sólida tanto en desarrollo como en uso final.
+                </p>
+                <p>
+                    En el lado del cliente, se utilizó <b>jQuery</b> para la manipulación
+                    del DOM y eventos, y <b>Bootstrap</b> para el diseño de interfaces responsivas
+                    y atractivas. Además, se implementó <b>ESLint</b>
+                    para mantener un código limpio, coherente y libre de errores comunes.
+                </p>
+                <p>
+                    Para facilitar el desarrollo local y la depuración, se emplearon
+                    contenedores <b>Docker</b>, lo que permitió mantener entornos de
+                    desarrollo aislados, consistentes y fácilmente replicables.
+                    Esta estrategia ayudó a acelerar los tiempos de prueba,
+                    mejorar la colaboración entre desarrolladores y reducir errores
+                    relacionados con diferencias en configuraciones locales.
+                </p>
+            </div>
+        </div>
+
+        <!-- Capturas de pantalla -->
+        <div class="column is-8 is-offset-2 mb-5">
+            <div class="column is-12 mb-5">
+                <h2 class="title is-size-4">Capturas de pantalla:</h2>
+            </div>
+            <div class="columns is-multiline">
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/muro_colaborativo/LoginProfesor.webp"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Login para un usuario de tipo profesor</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/muro_colaborativo/ListaMurales.webp"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Lista de los murales de un profesor</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/muro_colaborativo/MuroProfesor.webp"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Muro desde la cuenta de un profesor</b>
+                    </figcaption>
+                </div>
+                <div class="column is-6">
+                    <figure>
+                        <img src="../../assets/imgs/muro_colaborativo/MuroAlumno.webp"/>
+                    </figure>
+                    <figcaption class="is-size-7 has-text-centered">
+                        <b>Muro desde la cuenta de un alumno</b>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-4 card-contet">
+        <div class="container">
+            <div class="content has-text-centered">
+                <div class="mb-5">
+                    <h3 class="title is-size-5">Diego Zamora 2025</h3>
+                </div>
+                <div class="soc">
+                    <a
+                        href="https://github.com/diegozdgl10"
+                        target="_blank">
+                        <img class="invert-logo" src="../../assets/svg/github-black.svg" width="35"/>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/diego-arturo-zamora-cruz-7a5355264/"
+                        target="_blank"
+                        class="mx-5">
+                        <img class="invert-logo" src="../../assets/svg/linkedin-black.svg" width="35"/>
+                    </a>
+                    <a
+                        href=".././about.html">
+                        <img class="invert-logo" src="../../assets/svg/info-black.svg" width="35"/>
+                    </a>
+                </div>
+                <div class="mt-5">
+                    El contenido de este sitio web puede ser distribuido
+                    sin necesidad de consultar al propietario, siempre que
+                    se haga una cita de la URL del mismo
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
