@@ -1,6 +1,10 @@
+// Bloqueo para notificacion
+let toastBloqueado = false
+
 $(document).ready(function() {
     menuAmburguesa()
     tema()
+    bloqueoDevTools()
 })
 
 /* Manejo de navbar */
@@ -65,4 +69,55 @@ function cambioTema(tema) {
             $(this).removeClass('to-white')
         }
     })
+}
+
+/** Detecta opciones de desarrollador */
+function bloqueoDevTools() {
+    // Bloquea clic derecho
+    $(document).on('contextmenu', function (e) {
+        errorDesarrollador(e)
+    })
+
+    // Bloquea atajos comunes de DevTools
+    $(document).on('keydown', function (e) {
+        // F12
+        if (e.key === "F12") {
+            errorDesarrollador(e)
+        }
+        // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+        if (
+            e.ctrlKey &&
+            e.shiftKey &&
+            (e.key === "I" || e.key === "J" || e.key === "C")
+        ) {
+            errorDesarrollador(e)
+        }
+        // Ctrl+U (ver código fuente)
+        if (e.ctrlKey && e.keyCode === 85) {
+            errorDesarrollador(e)
+        }
+    })
+}
+
+/** Previene abrir opciones de desarrollador */
+function errorDesarrollador(evento) {
+    evento.preventDefault()
+
+    if (toastBloqueado) {
+        return
+    }
+
+    toastBloqueado = true
+    bulmaToast.toast({
+        message: "Opciones de desarrollador desactivadas",
+        type: "is-warning",
+        position: "bottom-center",
+        duration: 3000,
+        closeOnClick: true,
+        pauseOnHover: true,
+    })
+
+    setTimeout(() => {
+        toastBloqueado = false;
+    }, 3000)
 }
